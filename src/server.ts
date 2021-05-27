@@ -11,6 +11,10 @@ app.use(cors());
 
 app.use(express.json());
 
+app.get('/', async (req, res) => {
+  res.send("Welcome to a simple Github API")
+})
+
 app.get('/:repo', async (req, res) => {
   try {
     const { repo } = req.params
